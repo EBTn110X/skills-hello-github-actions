@@ -1,0 +1,14 @@
+name: customAction
+
+description: "this is a custom action"
+
+inputs:
+  name:
+    required: true
+    description: "gimme your name"
+
+runs:
+  using: composite
+  steps:
+    - name: showthename
+      run: echo ${{inputs.name}}
